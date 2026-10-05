@@ -4,7 +4,7 @@ An order-entry transaction benchmark harness for Elixir that runs against any Ec
 
 ## What it is for
 
-It supplies the schema, the data loader, the order-entry transactions and a weighted load runner, all adapter-agnostic, so one workload measures whatever repository a caller brings. Its scaling and query design notes are the RFDs in [`rfd`](rfd/).
+It supplies the schema, the data loader, the order-entry transactions and a weighted load runner, all adapter-agnostic, so one workload measures whatever repository a caller brings. `EctoBenchTpcc.Tpcc.Loader.load!/1` fills a repository, `EctoBenchTpcc.Tpcc.Procedures` holds the five transactions (`new_order`, `payment`, `order_status`, `delivery`, `stock_level`), and `EctoBenchTpcc.Harness.run/2` drives the weighted mix. Its scaling and query design notes are the RFDs in [`rfd`](rfd/).
 
 ## Building and running
 
